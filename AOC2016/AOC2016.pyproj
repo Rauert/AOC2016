@@ -1,0 +1,56 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3935fd9b-9e46-4148-a87e-373a2432fadc</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>AOC2016</Name>
+    <RootNamespace>AOC2016</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Inputs\" />
+    <Folder Include="Test\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Day08.py" />
+    <Compile Include="Day07.py" />
+    <Compile Include="Day06.py" />
+    <Compile Include="Day05.py" />
+    <Compile Include="Day04.py" />
+    <Compile Include="Day03.py" />
+    <Compile Include="Day02.py" />
+    <Compile Include="Day01.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Inputs\AOC08_1.txt" />
+    <Content Include="Inputs\AOC07_1.txt" />
+    <Content Include="Inputs\AOC06_1.txt" />
+    <Content Include="Inputs\AOC04_1.txt" />
+    <Content Include="Inputs\AOC03_1.txt" />
+    <Content Include="Inputs\AOC02_1.txt" />
+    <Content Include="Inputs\AOC01_1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
