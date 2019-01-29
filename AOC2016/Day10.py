@@ -10,7 +10,6 @@ outs = {} #Format: [List of outputs]
 for i in input:
     s = i.split()
     if len(s) == 6:
-        print
         ins.append([int(s[1]),s[5]])
     else:
         bots[s[1]] = [[],[s[5],s[6],s[10],s[11]]]
