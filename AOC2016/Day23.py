@@ -1,4 +1,4 @@
-import os
+import os, math
 fileDir = os.path.dirname(os.path.abspath(__file__))   # Directory of the Module
 input = open(fileDir+"\Inputs\AOC23_1.txt", "r").read().splitlines()
 
@@ -17,13 +17,14 @@ for i in input:
             b = int(s[2])
         program.append([s[0],a,b])
 
-def Part12():
+def Part1():
     reg = {"a":7,"b":0,"c":0,"d":0}
     ip = 0
     while ip < len(program):
-        #print(reg)
         instr = program[ip]
-        #print(instr)
+        #if ip in [20]:
+        #    print(instr)
+        #    print(reg)
         if instr[0] == "cpy":
             a = instr[1]
             if instr[1] in reg: a = reg[instr[1]]
@@ -56,4 +57,9 @@ def Part12():
             ip += 1
     print("Part 1:", reg["a"])
 
-Part12()
+#Analysis shows that program is calculating factorial and then adding a constant
+def Part2(num):
+    return math.factorial(num) + (95*73)
+
+Part1()
+print("Part 2:", Part2(12))
